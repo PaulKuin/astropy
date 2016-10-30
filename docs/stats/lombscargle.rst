@@ -241,7 +241,7 @@ This best-fit sinusoid can be computed using the :func:`~astropy.stats.LombScarg
 
 >>> best_frequency = frequency[np.argmax(power)]
 >>> t_fit = np.linspace(0, 1)
->>> y_fit = LombScargle(t, y, dy).model(t_fit, best_frequency)
+>>> y_fit = LombScargle(t, y, dy).model(t_fit/best_frequency, best_frequency)
 
 We can then phase the data and plot the Lomb-Scargle model fit:
 
